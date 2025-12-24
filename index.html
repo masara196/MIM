@@ -3,78 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIM Training & Education</title>
+
+<title>Bimbel Matematika OSN | MIM Training & Education</title>
+<meta name="description" content="MIM Training & Education adalah bimbingan belajar matematika Pra OSN, OSN, reguler dan private untuk SD SMP SMA. Konsultasi gratis.">
 
 <style>
 :root{
   --green:#15803d;
-  --green2:#22c55e;
-  --yellow:#ffa51e;
   --dark:#064e3b;
+  --yellow:#ffa51e;
+  --bg:#f9fafb;
 }
-*{margin:0;box-sizing:border-box;font-family:system-ui}
-body{color:var(--dark);line-height:1.6}
 
-/* NAV */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+body{
+  color:var(--dark);
+  background:#fff;
+  line-height:1.65;
+}
+
+/* ================= NAVBAR ================= */
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:white;
-  z-index:100;
-  box-shadow:0 2px 10px rgba(0,0,0,.05)
+  background:#fff;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
+
 .nav-wrap{
   max-width:1200px;
   margin:auto;
+  padding:14px 20px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  padding:14px 20px
+  align-items:center;
 }
+
 .nav-left{
   display:flex;
   align-items:center;
-  gap:12px
-}
-.nav-right a{
-  margin-left:22px;
-  color:var(--dark);
-  text-decoration:none;
-  font-weight:600
-}
-.nav-right a:hover{
-  color:var(--green)
+  gap:12px;
 }
 
-/* HAMBURGER */
+.nav-right{
+  display:flex;
+  gap:22px;
+}
+
+.nav-right a{
+  text-decoration:none;
+  font-weight:600;
+  color:var(--dark);
+}
+
+.nav-right a:hover{
+  color:var(--green);
+}
+
 .hamburger{
   display:none;
   font-size:28px;
   cursor:pointer;
 }
 
-
-/* MOBILE NAV */
-@media(max-width:768px){
-  .hamburger{display:block;}
-  .nav-right{
-    position:absolute;
-    top:64px;
-    right:0;
-    background:white;
-    width:100%;
-    display:none;
-    flex-direction:column;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-  }
-  .nav-right a{padding:16px 20px;border-bottom:1px solid #eee;
-  }
-  .nav-right.show{display:flex;}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:inherit;
 }
 
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
   min-height:100vh;
   background:
@@ -83,75 +92,77 @@ nav{
   background-size:cover;
   background-position:center;
   display:flex;
-  align-items:center
+  align-items:center;
 }
+
 .hero-content{
   max-width:1200px;
   margin:auto;
-  padding:110px 20px;
-  color:white
+  padding:120px 20px;
+  color:#fff;
 }
-.hero h1{font-size:48px;max-width:720px}
-.hero h1 span{color:var(--yellow)}
-.hero p{max-width:600px;margin:20px 0;font-size:18px}
+
+.hero h1{
+  font-size:46px;
+  max-width:700px;
+}
+
+.hero h1 span{ color:var(--yellow); }
+
+.hero p{
+  max-width:560px;
+  margin:18px 0 28px;
+  font-size:18px;
+}
+
 .hero a{
   display:inline-block;
-  margin-right:14px;
-  padding:14px 28px;
+  padding:14px 30px;
   border-radius:40px;
   font-weight:700;
-  text-decoration:none
-}
-  
-.btn-main{background:var(--yellow);color:#000;}
-.btn-alt{border:2px solid white;color:white}
-
-@media(max-width:768px){
-  .hero{min-height:75vh;background-position:center top;}
-
-  .hero-content{padding-top:140px;text-align:center;}
-
-  .hero p{font-size:16px;}
-
-  .hero a{margin-bottom:10px;}
+  text-decoration:none;
+  margin-right:12px;
 }
 
+.btn-main{ background:var(--yellow); color:#000; }
+.btn-alt{ border:2px solid #fff; color:#fff; }
 
+/* ================= SECTION ================= */
+section{ padding:90px 20px; }
+.container{ max-width:1200px; margin:auto; }
 
-/* SECTION */
-section{padding:90px 20px}
-.container{max-width:1200px;margin:auto}
-h2{text-align:center;font-size:36px;margin-bottom:20px}
-.subtitle{text-align:center;max-width:720px;margin:0 auto 50px}
+h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:12px;
+}
 
-/* PROGRAM */
+.subtitle{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 50px;
+  color:#374151;
+}
+
+/* ================= PROGRAM ================= */
 .program-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px
+  gap:30px;
 }
+
 .program-card{
-  background:white;
+  background:#fff;
   padding:30px;
   border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.1);
-  text-align:center
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  text-align:center;
+  position:relative;
 }
-.program-card h3{color:var(--green);margin-bottom:10px}
-.program-card p{font-size:15px;margin-bottom:20px}
-.btn-wa{
-  display:inline-block;
-  background:#16a34a;
-  color:white;
-  padding:12px 24px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px
-}
+
 .program-card.featured{
   border:3px solid var(--yellow);
-  transform:scale(1.05);
+  transform:translateY(-6px);
 }
 
 .badge{
@@ -159,96 +170,171 @@ h2{text-align:center;font-size:36px;margin-bottom:20px}
   top:-12px;
   right:20px;
   background:var(--yellow);
-  color:#000;
   padding:6px 14px;
   border-radius:20px;
   font-size:12px;
   font-weight:700;
 }
 
-/* ABOUT */
+.program-card h3{
+  color:var(--green);
+  margin-bottom:10px;
+}
+
+.program-card p{
+  font-size:15px;
+  margin-bottom:20px;
+}
+
+.btn-wa{
+  display:inline-block;
+  padding:12px 26px;
+  background:#16a34a;
+  color:#fff;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* ================= ABOUT ================= */
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
-  align-items:center
+  align-items:center;
 }
-.about img{width:100%;max-width:420px}
 
-/* CAROUSEL */
+.about img{
+  width:100%;
+  max-width:420px;
+}
+
+/* ================= CAROUSEL ================= */
 .carousel-box{
   max-width:800px;
-  margin:0 auto;
-  background:white;
+  margin:auto;
+  background:#fff;
   border-radius:20px;
   overflow:hidden;
-  box-shadow:0 15px 35px rgba(0,0,0,.15);
-  position:relative
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  position:relative;
 }
-.carousel-box img{width:100%;display:block}
+
+.carousel-box img{
+  width:100%;
+  display:block;
+}
+
 .carousel-desc{
-  background:#dcfce7;
+  background:#ecfdf5;
   padding:18px;
   text-align:center;
-  font-weight:600
+  font-weight:600;
 }
+
 .carousel-btn{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:rgba(0,0,0,.5);
-  color:white;
+  background:rgba(0,0,0,.6);
+  color:#fff;
   border:none;
-  font-size:26px;
-  padding:10px 16px;
+  font-size:30px;
+  padding:12px 16px;
   cursor:pointer;
-  border-radius:50%
+  border-radius:50%;
 }
-.prev{left:10px}
-.next{right:10px}
 
-/* STATS */
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* ================= STATS ================= */
 .stats{
   background:
     linear-gradient(rgba(6,78,59,.85),rgba(6,78,59,.85)),
     url("img/stats.jpg");
   background-size:cover;
-  color:white
+  color:#fff;
 }
+
 .stats-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:30px;
-  text-align:center
+  text-align:center;
 }
-.stats h3{font-size:42px;color:var(--yellow)}
 
-/* FLOAT WA */
+.stats h3{
+  font-size:42px;
+  color:var(--yellow);
+}
+
+/* ================= FLOAT WA ================= */
 .floating-wa{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#16a34a;
-  color:white;
-  padding:14px 20px;
+  color:#fff;
+  padding:14px 22px;
   border-radius:50px;
   font-weight:700;
   text-decoration:none;
   box-shadow:0 10px 25px rgba(0,0,0,.2);
-  z-index:999
+  z-index:999;
 }
 
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
-  background:#064e3b;
-  color:white;
+  background:var(--dark);
+  color:#fff;
   text-align:center;
   padding:30px;
-  font-size:14px
+  font-size:14px;
 }
 
+/* ================= MOBILE ================= */
+@media(max-width:768px){
 
+  .hamburger{ display:block; }
+
+  .nav-right{
+    display:none;
+    position:absolute;
+    top:64px;
+    right:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+  }
+
+  .nav-right a{
+    padding:16px 20px;
+    border-bottom:1px solid #eee;
+  }
+
+  .nav-right.show{ display:flex; }
+
+  .hero{
+    min-height:70vh;
+    background-position:center top;
+  }
+
+  .hero h1{ font-size:30px; }
+  .hero p{ font-size:16px; }
+
+  .about{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .about img{
+    max-width:280px;
+    margin:auto;
+  }
+}
 </style>
 </head>
 
@@ -258,9 +344,11 @@ footer{
 <nav>
   <div class="nav-wrap">
     <div class="nav-left">
-      <img src="logo-mim.png" alt="Logo MIM" height="40">
-      <strong>MIM Training & Education</strong>
-    </div>
+  <a href="index.html" class="brand">
+    <img src="logo-mim.png" alt="Logo MIM" height="40">
+    <strong>MIM Training & Education</strong>
+  </a>
+</div>
 
     <div class="nav-right" id="navMenu">
       <a href="#program">Program</a>
@@ -268,19 +356,15 @@ footer{
       <a href="karir.html">Karir</a>
       <a href="https://wa.me/62895321977815">Hubungi Kami</a>
     </div>
-
-    <!-- HAMBURGER -->
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </nav>
 
-
 <!-- HERO -->
 <div class="hero">
   <div class="hero-content">
-    <h1> Smart <span>Learning</span><br>for a Smart <span>Future</span></h1>
-    <p> Menuntut ilmu seharusnya membawa perubahan positif dalam akhlak dan perilaku. 
-           Jangan biarkan ilmu membuat kamu menjadi sombong, tetapi jadilah lebih rendah hati dan baik.</p>
+    <h1>Smart <span>Learning</span><br>for a Smart <span>Future</span></h1>
+    <p>Bimbingan Matematika Pra OSN, OSN, dan kelas reguler dengan pendekatan terarah & berprestasi.</p>
     <a class="btn-main" href="https://wa.me/62895321977815">Konsultasi Gratis</a>
     <a class="btn-alt" href="#program">Lihat Program</a>
   </div>
@@ -288,134 +372,79 @@ footer{
 
 <!-- ABOUT -->
 <section id="about">
-<div class="container about">
-  <div>
-    <h2>Tentang Kami</h2>
-    <p>
-      MIM Training & Education merupakan salah satu lembaga pendidikan nonformal yang berkomitmen 
-membantu siswa menggali potensi terbaiknya melalui pembelajaran yang terarah, interaktif, dan mudah dipahami. 
-Dengan tutor berpengalaman dan metode belajar yang efektif, kami hadir untuk mendampingi setiap siswa mencapai 
-prestasi akademik yang maksimal. </p>
-<a class="btn-wa"
-     href="https://wa.me/62895321977815?">Daftar Sekarang</a>
+  <div class="container about">
+    <div>
+      <h2>Tentang Kami</h2>
+      <p>
+        MIM Training & Education adalah lembaga pendidikan nonformal
+        yang berkomitmen mendampingi siswa mencapai prestasi akademik
+        melalui pembelajaran terarah dan efektif.
+      </p>
+      <a class="btn-wa" href="https://wa.me/62895321977815">Daftar Sekarang</a>
+    </div>
+    <img src="img/tentang.png" alt="Tentang MIM" loading="lazy">
   </div>
-  <img src="img/tentang.png">
-</div>
 </section>
 
 <!-- PROGRAM -->
 <section id="program">
-<div class="container">
-<h2>Program Unggulan</h2>
-<p class="subtitle">Pilih program sesuai kebutuhan belajar Anda</p>
+  <div class="container">
+    <h2>Program Unggulan</h2>
+    <p class="subtitle">Pilih program sesuai kebutuhan belajar Anda</p>
 
-<div class="program-grid">
-  <div class="program-card">
-    <h3>Pra OSN</h3>
-    <p>Penguatan konsep dasar dan logika matematika sebagai persiapan menuju OSN.</p>
-    <a class="btn-wa"
-         href="https://wa.me/62895321977815?text=Saya%20tertarik%20Kelas%20Pra%20OSN%20di%20MIM"
-         target="_blank">Daftar Pra OSN</a>     
+    <div class="program-grid">
+      <div class="program-card">
+        <h3>Pra OSN</h3>
+        <p>Fondasi konsep dan logika matematika.</p>
+        <a class="btn-wa" href="https://wa.me/62895321977815">Daftar</a>
+      </div>
+
+      <div class="program-card featured">
+        <div class="badge">Unggulan</div>
+        <h3>Persiapan OSN</h3>
+        <p>Pembinaan intensif menuju kompetisi OSN.</p>
+        <a class="btn-wa" href="https://wa.me/62895321977815">Daftar OSN</a>
+      </div>
+
+      <div class="program-card">
+        <h3>Bimbel Reguler</h3>
+        <p>SD, SMP, SMA sesuai kurikulum.</p>
+        <a class="btn-wa" href="https://wa.me/62895321977815">Daftar</a>
+      </div>
+
+      <div class="program-card">
+        <h3>Kelas Private</h3>
+        <p>Pendampingan personal & fleksibel.</p>
+        <a class="btn-wa" href="https://wa.me/62895321977815">Booking</a>
+      </div>
+    </div>
   </div>
-  
-<div class="program-card featured">
-  <div class="badge">Unggulan</div>
-    <h3>Persiapan OSN</h3>
-    <p>Pembinaan intensif latihan mengerjakan dan membahas soal, beserta simulasi OSN.</p>
-    <a class="btn-wa"
-         href="https://wa.me/62895321977815?text=Daftar%20OSN">Daftar OSN</a>
-  </div>
-
-    
-    
-  <div class="program-card">
-      <h3>Kelas Bimbingan Belajar</h3>
-      <p>Bimbel SD, SMP, SMA sesuai dengan kurikulum sekolah.</p>
-      <a class="btn-wa"
-         href="https://wa.me/62895321977815?text=Saya%20ingin%20daftar%20Bimbingan%20Belajar%20Matematika"
-         target="_blank">Daftar Bimbel</a>
-    </div>
-
-    <div class="program-card">
-      <h3>Kelas Private</h3>
-      <p>Pendampingan 1 siswa dengan jadwal fleksibel dan target khusus.</p>
-      <a class="btn-wa"
-         href="https://wa.me/62895321977815?text=Saya%20ingin%20booking%20Kelas%20Private%20Matematika"
-         target="_blank">Booking Private</a>
-    </div>
-
-    <div class="program-card">
-      <h3>Program untuk Sekolah</h3>
-      <p>Kerja sama pembinaan siswa atau pelatihan guru untuk sekolah secara online maupun offline.</p>
-      <a class="btn-wa"
-         href="https://wa.me/62895321977815?text=Saya%20ingin%20kerja%20sama%20Program%20Sekolah%20dengan%20MIM"
-         target="_blank">Kerja Sama Sekolah</a>
-    </div>
-    
-
-</div>
 </section>
 
 <!-- DOKUMENTASI -->
 <section style="background:#f0fdf4">
-<div class="container">
-<h2>Dokumentasi Kegiatan</h2>
-<p class="subtitle">Pembinaan, kelas, dan event akademik</p>
-
-<div class="carousel-box">
-  <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
-  <img id="carousel-img" src="img/kegiatan1.jpg">
-  <button class="carousel-btn next" onclick="nextSlide()">›</button>
-  <div class="carousel-desc" id="carousel-desc">
-    Pembinaan intensif OSN
+  <div class="container">
+    <h2>Dokumentasi Kegiatan</h2>
+    <div class="carousel-box">
+      <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
+      <img id="carousel-img" src="img/kegiatan1.jpg" alt="Dokumentasi MIM">
+      <button class="carousel-btn next" onclick="nextSlide()">›</button>
+      <div class="carousel-desc" id="carousel-desc">Pembinaan intensif OSN</div>
+    </div>
   </div>
-</div>
-</div>
 </section>
 
 <!-- STATS -->
 <section class="stats">
-<div class="container stats-grid">
-  <div><h3>500+</h3><p>Siswa Dibina</p></div>
-  <div><h3>120+</h3><p>Peserta OSN</p></div>
-  <div><h3>30+</h3><p>Event</p></div>
-  <div><h3>10+</h3><p>Sekolah Mitra</p></div>
-</div>
+  <div class="container stats-grid">
+    <div><h3>500+</h3><p>Siswa Dibina</p></div>
+    <div><h3>120+</h3><p>Peserta OSN</p></div>
+    <div><h3>30+</h3><p>Event Akademik</p></div>
+    <div><h3>10+</h3><p>Sekolah Mitra</p></div>
+  </div>
 </section>
 
-<footer>
-© 2025 MIM Training & Education
-</footer>
-
-<script>
-const images=[
-  "img/kegiatan1.jpg",
-  "img/kegiatan2.jpg",
-  "img/kegiatan3.jpg"
-];
-const texts=[
-  "Pembinaan intensif OSN",
-  "Kelas online interaktif",
-  "Try Out dan evaluasi"
-];
-let i=0;
-const img=document.getElementById("carousel-img");
-const desc=document.getElementById("carousel-desc");
-
-function showSlide(){
-  img.src=images[i];
-  desc.textContent=texts[i];
-}
-function nextSlide(){
-  i=(i+1)%images.length;
-  showSlide();
-}
-function prevSlide(){
-  i=(i-1+images.length)%images.length;
-  showSlide();
-}
-setInterval(nextSlide,4000);
-</script>
+<footer>© 2025 MIM Training & Education</footer>
 
 <a class="floating-wa" href="https://wa.me/62895321977815">💬 WhatsApp</a>
 
@@ -423,8 +452,25 @@ setInterval(nextSlide,4000);
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
-</script>
 
+const images=["img/kegiatan1.jpg","img/kegiatan2.jpg","img/kegiatan3.jpg"];
+const texts=["Pembinaan intensif OSN","Kelas online interaktif","Try Out dan evaluasi"];
+let i=0;
+
+function nextSlide(){
+  i=(i+1)%images.length;
+  updateSlide();
+}
+function prevSlide(){
+  i=(i-1+images.length)%images.length;
+  updateSlide();
+}
+function updateSlide(){
+  document.getElementById("carousel-img").src=images[i];
+  document.getElementById("carousel-desc").textContent=texts[i];
+}
+setInterval(nextSlide,4000);
+</script>
 
 </body>
 </html>
