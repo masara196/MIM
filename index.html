@@ -75,8 +75,21 @@ nav{
   font-weight:700;
   text-decoration:none
 }
-.btn-main{background:var(--yellow);color:var(--dark)}
+  
+.btn-main{background:var(--yellow);color:#000;}
 .btn-alt{border:2px solid white;color:white}
+
+@media(max-width:768px){
+  .hero{min-height:85vh;background-position:center top;}
+
+  .hero-content{padding-top:140px;text-align:center;}
+
+  .hero p{font-size:16px;}
+
+  .hero a{margin-bottom:10px;}
+}
+
+
 
 /* SECTION */
 section{padding:90px 20px}
@@ -346,4 +359,3 @@ setInterval(nextSlide,4000);
 
 </body>
 </html>
-
