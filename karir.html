@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karir | MIM Training & Education</title>
+<meta name="description" content="Lowongan tutor dan tenaga pendidik di MIM Training & Education.">
+
+<style>
+:root{
+  --green:#15803d;
+  --dark:#064e3b;
+  --yellow:#ffa51e;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{color:var(--dark);line-height:1.6;background:#fff}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  background:white;
+  z-index:100;
+  box-shadow:0 2px 10px rgba(0,0,0,.05)
+}
+.nav-wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-right a{
+  margin-left:22px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600
+}
+.brand{display:flex;align-items:center;gap:12px;
+  text-decoration:none;
+  color:inherit;
+}
+
+/* HERO */
+.hero{
+  min-height:55vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("img/event2.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center
+}
+.hero-content{
+  max-width:1200px;
+  margin:auto;
+  padding:120px 20px;
+  color:white
+}
+.hero h1{font-size:42px}
+.hero p{max-width:520px;margin-top:16px;font-size:18px}
+
+/* SECTION */
+section{padding:80px 20px}
+.container{max-width:1200px;margin:auto}
+h2{text-align:center;font-size:32px;margin-bottom:12px}
+.subtitle{text-align:center;max-width:700px;margin:0 auto 50px}
+
+/* JOB CARD */
+.job-card{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1)
+}
+.job-card h3{color:var(--green);margin-bottom:10px}
+.job-card ul{margin-left:18px;margin-bottom:20px}
+.job-card li{margin-bottom:8px}
+.btn{
+  display:inline-block;
+  background:var(--green);
+  color:white;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:30px;
+  font-size:14px
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-left">
+  <a href="index.html" class="brand">
+    <img src="logo-mim.png" alt="Logo MIM" height="40">
+    <strong>MIM Training & Education</strong>
+  </a>
+</div>
+
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="event.html">Event</a>
+      <a href="karir.html">Karir</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Bergabung Bersama Kami</h1>
+    <p>Jadilah bagian dari lembaga pendidikan yang berfokus pada prestasi dan karakter.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>Lowongan Tersedia</h2>
+    <p class="subtitle">Kesempatan berkarir di dunia pendidikan bersama MIM Training & Education</p>
+
+    <div class="job-card">
+      <h3>Tutor Matematika</h3>
+      <ul>
+        <li>Menguasai materi Matematika SD/SMP/SMA</li>
+        <li>Memiliki passion mengajar</li>
+        <li>Komunikatif & bertanggung jawab</li>
+        <li>Sistem online / hybrid</li>
+      </ul>
+      <a class="btn" href="https://wa.me/62895321977815">Lamar via WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+© 2025 MIM Training & Education
+</footer>
+
+</body>
+</html>
