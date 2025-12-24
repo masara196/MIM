@@ -47,6 +47,39 @@ nav{
   color:var(--green)
 }
 
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* MOBILE NAV */
+@media(max-width:768px){
+  .hamburger{
+    display:block;
+  }
+
+  .nav-right{
+    position:absolute;
+    top:64px;
+    right:0;
+    background:white;
+    width:100%;
+    display:none;
+    flex-direction:column;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+  }
+
+  .nav-right a{
+    padding:16px 20px;
+    border-bottom:1px solid #eee;
+  }
+
+  .nav-right.show{display:flex;}
+}
+
+
 /* HERO */
 .hero{
   min-height:100vh;
@@ -180,6 +213,22 @@ h2{text-align:center;font-size:36px;margin-bottom:20px}
 }
 .stats h3{font-size:42px;color:var(--yellow)}
 
+/* FLOAT WA */
+.floating-wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#16a34a;
+  color:white;
+  padding:14px 20px;
+  border-radius:50px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  z-index:999
+}
+
+
 /* FOOTER */
 footer{
   background:#064e3b;
@@ -207,15 +256,22 @@ footer{
       <img src="logo-mim.png" alt="Logo MIM" height="40">
       <strong>MIM Training & Education</strong>
     </div>
-    <div class="nav-right">
+
+    <div class="nav-right" id="navMenu">
       <a href="#program">Program</a>
       <a href="#about">Tentang</a>
       <a href="event.html">Event</a>
       <a href="karir.html">Karir</a>
       <a href="https://wa.me/62895321977815">Hubungi Kami</a>
     </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
   </div>
 </nav>
+
 
 <!-- HERO -->
 <div class="hero">
@@ -354,6 +410,14 @@ function prevSlide(){
   showSlide();
 }
 setInterval(nextSlide,4000);
+</script>
+
+<a class="floating-wa" href="https://wa.me/62895321977815">💬 WhatsApp</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
 </script>
 
 
