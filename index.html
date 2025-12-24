@@ -1,369 +1,348 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIM Training & Education | Bimbel Online Matematika</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIM Training & Education</title>
 
-  <!-- SEO -->
-  <meta name="description" content="MIM Training & Education adalah bimbel online matematika SMP, SMA, dan UTBK dengan metode terstruktur, logis, dan mudah dipahami." />
-  <meta name="keywords" content="bimbel matematika online, les matematika SMP SMA, bimbel UTBK, MIM Training Education" />
+<style>
+:root{
+  --green:#15803d;
+  --green2:#22c55e;
+  --yellow:#facc15;
+  --dark:#064e3b;
+}
+*{margin:0;box-sizing:border-box;font-family:system-ui}
+body{color:var(--dark);line-height:1.6}
 
-  <style>
-    :root {
-      --primary: #15803d;
-      --secondary: #0f172a;
-      --accent: #f59e0b;
-      --bg: #f8fafc;
-    }
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  z-index:100;
+  box-shadow:0 2px 10px rgba(0,0,0,.05)
+}
+.nav-wrap{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px
+}
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+.nav-right a{
+  margin-left:22px;
+  color:var(--dark);
+  text-decoration:none;
+  font-weight:600
+}
+.nav-right a:hover{
+  color:var(--green)
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("img/hero.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center
+}
+.hero-content{
+  max-width:1200px;
+  margin:auto;
+  padding:110px 20px;
+  color:white
+}
+.hero h1{font-size:48px;max-width:720px}
+.hero h1 span{color:var(--yellow)}
+.hero p{max-width:600px;margin:20px 0;font-size:18px}
+.hero a{
+  display:inline-block;
+  margin-right:14px;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none
+}
+.btn-main{background:var(--yellow);color:var(--dark)}
+.btn-alt{border:2px solid white;color:white}
 
-    body {
-      background: var(--bg);
-      color: #0f172a;
-      line-height: 1.6;
-    }
+/* SECTION */
+section{padding:90px 20px}
+.container{max-width:1200px;margin:auto}
+h2{text-align:center;font-size:36px;margin-bottom:20px}
+.subtitle{text-align:center;max-width:720px;margin:0 auto 50px}
 
-    a { text-decoration: none; }
+/* PROGRAM */
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px
+}
+.program-card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  text-align:center
+}
+.program-card h3{color:var(--green);margin-bottom:10px}
+.program-card p{font-size:15px;margin-bottom:20px}
+.btn-wa{
+  display:inline-block;
+  background:#16a34a;
+  color:white;
+  padding:12px 24px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px
+}
 
-    /* ================= HEADER ================= */
-    header {
-      background: linear-gradient(135deg, var(--primary), #16a34a);
-      color: white;
-      padding: 48px 20px 64px;
-    }
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center
+}
+.about img{width:100%;max-width:420px}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+/* CAROUSEL */
+.carousel-box{
+  max-width:800px;
+  margin:0 auto;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  position:relative
+}
+.carousel-box img{width:100%;display:block}
+.carousel-desc{
+  background:#dcfce7;
+  padding:18px;
+  text-align:center;
+  font-weight:600
+}
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.5);
+  color:white;
+  border:none;
+  font-size:26px;
+  padding:10px 16px;
+  cursor:pointer;
+  border-radius:50%
+}
+.prev{left:10px}
+.next{right:10px}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-    }
+/* STATS */
+.stats{
+  background:
+    linear-gradient(rgba(6,78,59,.85),rgba(6,78,59,.85)),
+    url("img/stats.jpg");
+  background-size:cover;
+  color:white
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  text-align:center
+}
+.stats h3{font-size:42px;color:var(--yellow)}
 
-    nav h1 {
-      font-size: 22px;
-      font-weight: 700;
-    }
+/* FOOTER */
+footer{
+  background:#064e3b;
+  color:white;
+  text-align:center;
+  padding:30px;
+  font-size:14px
+}
 
-    nav a {
-      color: white;
-      margin-left: 16px;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    /* ================= HERO ================= */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero h2 {
-      font-size: 40px;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 28px;
-      opacity: 0.95;
-    }
-
-    .cta {
-      display: inline-block;
-      background: var(--accent);
-      color: #1e293b;
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    /* ================= SECTION ================= */
-    section {
-      padding: 64px 20px;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 30px;
-    }
-
-    /* ================= CARDS ================= */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: var(--primary);
-      font-size: 20px;
-    }
-
-    /* ================= PRICING ================= */
-    .price {
-      font-size: 32px;
-      font-weight: 800;
-      margin: 16px 0;
-    }
-
-    .highlight {
-      border: 2px solid var(--primary);
-      transform: scale(1.03);
-    }
-
-    /* ================= FOOTER ================= */
-    footer {
-      background: var(--secondary);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* ================= MOBILE ================= */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .hero h2 {
-        font-size: 28px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section h2 {
-        font-size: 24px;
-      }
-
-      .cta {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .about{grid-template-columns:1fr;text-align:center}
+  .nav-right{display:none}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <div class="container">
-    <nav>
-      <div style="display:flex;align-items:center;gap:12px;">
-        <img src="logo-mim.png" alt="Logo MIM Training & Education" style="height:40px;width:auto;" />
-        <h1>MIM Training & Education</h1>
-      </div>
-      <div>
-        <a href="#tentang">Tentang</a>
-        <a href="#program">Program</a>
-        <a href="#harga">Harga</a>
-      </div>
-    </nav>
-
-    <div class="hero">
-      <div>
-        <h2>Bimbel Online Matematika<br>Terstruktur & Mudah Dipahami</h2>
-        <p>MIM Training & Education membantu siswa SMP, SMA, dan UTBK memahami matematika dengan metode logis, bertahap, dan fokus pada pemahaman konsep.</p>
-        <a class="cta" href="https://wa.me/62895321977815">Konsultasi Gratis via WhatsApp</a>
-      </div>
-      <div>
-        <img src="https://illustrations.popsy.co/blue/online-learning.svg" alt="Belajar Online" width="100%" />
-      </div>
+<!-- NAV -->
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-left">
+      <img src="logo-mim.png" alt="Logo MIM" height="40">
+      <strong>MIM Training & Education</strong>
+    </div>
+    <div class="nav-right">
+      <a href="#program">Program</a>
+      <a href="#about">Tentang</a>
+      <a href="event.html">Event</a>
+      <a href="karir.html">Karir</a>
+      <a href="https://wa.me/62895321977815">Hubungi Kami</a>
     </div>
   </div>
-</header>
+</nav>
 
-<section id="tentang">
-  <div class="container">
-    <h2>Tentang MIM Training & Education</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Metode Terstruktur</h3>
-        <p>Materi disusun dari konsep dasar hingga lanjutan agar siswa benar-benar paham, bukan sekadar hafal rumus.</p>
-      </div>
-      <div class="card">
-        <h3>Interaktif & Live</h3>
-        <p>Kelas online live dengan tutor berpengalaman, diskusi aktif, dan rekaman pembelajaran.</p>
-      </div>
-      <div class="card">
-        <h3>Fokus Hasil</h3>
-        <p>Latihan soal terarah, pembahasan detail, dan evaluasi berkala untuk peningkatan nilai.</p>
-      </div>
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1> Smart <span>Learning</span><br>for a Smart <span>Future</span></h1>
+    <p> Menuntut ilmu seharusnya membawa perubahan positif dalam akhlak dan perilaku. 
+           Jangan biarkan ilmu membuat kamu menjadi sombong, tetapi jadilah lebih rendah hati dan baik.</p>
+    <a class="btn-main" href="https://wa.me/62895321977815">Konsultasi Gratis</a>
+    <a class="btn-alt" href="#program">Lihat Program</a>
   </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container about">
+  <div>
+    <h2>Tentang Kami</h2>
+    <p>
+      MIM Training & Education merupakan salah satu lembaga pendidikan nonformal yang berkomitmen 
+membantu siswa menggali potensi terbaiknya melalui pembelajaran yang terarah, interaktif, dan mudah dipahami. 
+Dengan tutor berpengalaman dan metode belajar yang efektif, kami hadir untuk mendampingi setiap siswa mencapai 
+prestasi akademik yang maksimal. </p>
+<a class="btn-wa"
+     href="https://wa.me/62895321977815?">Daftar Sekarang</a>
+  </div>
+  <img src="img/tentang.png">
+</div>
 </section>
 
-<section id="program" style="background:#ecfdf5">
-  <div class="container">
-    <h2>Program MIM Training & Education</h2>
-    <div class="grid">
+<!-- PROGRAM -->
+<section id="program">
+<div class="container">
+<h2>Program Unggulan</h2>
+<p class="subtitle">Pilih program sesuai kebutuhan belajar Anda</p>
 
-      <div class="card">
-        <h3>Kelas Pra OSN</h3>
-        <p>Program pengenalan dan penguatan konsep matematika dasar sebagai fondasi menuju Olimpiade Sains Nasional (OSN).</p>
-        <a class="btn-wa" href="https://wa.me/62895321977815?text=Saya%20tertarik%20dengan%20Kelas%20Pra%20OSN%20di%20MIM%20Training%20%26%20Education" target="_blank">Daftar Pra OSN</a>
-      </div>
-
-      <div class="card">
-        <h3>Kelas Persiapan OSN</h3>
-        <p>Pembinaan intensif OSN Matematika dengan soal-soal level olimpiade, pembahasan mendalam, dan strategi pemecahan masalah.</p>
-        <a class="btn-wa" href="https://wa.me/62895321977815?text=Saya%20ingin%20konsultasi%20Kelas%20Persiapan%20OSN%20MIM" target="_blank">Konsultasi OSN</a>
-      </div>
-
-      <div class="card">
-        <h3>Kelas Bimbingan Belajar</h3>
-        <p>Bimbingan belajar rutin matematika SD, SMP, dan SMA untuk meningkatkan pemahaman konsep dan prestasi akademik.</p>
-        <a class="btn-wa" href="https://wa.me/62895321977815?text=Saya%20ingin%20daftar%20Bimbingan%20Belajar%20Matematika%20di%20MIM" target="_blank">Daftar Bimbel</a>
-      </div>
-
-      <div class="card">
-        <h3>Kelas Private</h3>
-        <p>Pendampingan 1 siswa dengan jadwal fleksibel dan materi yang disesuaikan dengan kebutuhan serta target belajar.</p>
-        <a class="btn-wa" href="https://wa.me/62895321977815?text=Saya%20tertarik%20Private%20Matematika%20di%20MIM%20Training%20%26%20Education" target="_blank">Booking Private</a>
-      </div>
-
-      <div class="card">
-        <h3>Program untuk Sekolah</h3>
-        <p>Program kerja sama dengan sekolah: pelatihan guru, kelas pembinaan siswa, dan persiapan lomba akademik.</p>
-        <a class="btn-wa" href="https://wa.me/62895321977815?text=Saya%20ingin%20kerja%20sama%20Program%20Sekolah%20dengan%20MIM" target="_blank">Kerja Sama Sekolah</a>
-      </div>
-
-    </div>
+<div class="program-grid">
+  <div class="program-card">
+    <h3>Pra OSN</h3>
+    <p>Penguatan konsep dasar dan logika matematika sebagai persiapan menuju OSN.</p>
+    <a class="btn-wa"
+         href="https://wa.me/62895321977815?text=Saya%20tertarik%20Kelas%20Pra%20OSN%20di%20MIM"
+         target="_blank">Daftar Pra OSN</a>     
   </div>
+  
+  <div class="program-card">
+    <h3>Persiapan OSN</h3>
+    <p>Pembinaan intensif latihan mengerjakan dan membahas soal, beserta simulasi OSN.</p>
+    <a class="btn-wa"
+         href="https://wa.me/62895321977815?text=Daftar%20OSN">Konsultasi</a>
+  </div>
+    
+  <div class="program-card">
+      <h3>Kelas Bimbingan Belajar</h3>
+      <p>Bimbel matematika SD, SMP, SMA sesuai kurikulum sekolah.</p>
+      <a class="btn-wa"
+         href="https://wa.me/62895321977815?text=Saya%20ingin%20daftar%20Bimbingan%20Belajar%20Matematika"
+         target="_blank">Daftar Bimbel</a>
+    </div>
+
+    <div class="program-card">
+      <h3>Kelas Private</h3>
+      <p>Pendampingan 1 siswa dengan jadwal fleksibel dan target khusus.</p>
+      <a class="btn-wa"
+         href="https://wa.me/62895321977815?text=Saya%20ingin%20booking%20Kelas%20Private%20Matematika"
+         target="_blank">Booking Private</a>
+    </div>
+
+    <div class="program-card">
+      <h3>Program untuk Sekolah</h3>
+      <p>Kerja sama pembinaan siswa dan pelatihan guru untuk sekolah.</p>
+      <a class="btn-wa"
+         href="https://wa.me/62895321977815?text=Saya%20ingin%20kerja%20sama%20Program%20Sekolah%20dengan%20MIM"
+         target="_blank">Kerja Sama Sekolah</a>
+    </div>
+    
+
+</div>
 </section>
 
-<section id="harga">
-  <div class="container">
-    <h2>Paket Belajar</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Basic</h3>
-        <p class="price">Rp199.000</p>
-        <p>4x pertemuan / bulan</p>
-      </div>
-      <div class="card highlight">
-        <h3>Premium</h3>
-        <p class="price">Rp399.000</p>
-        <p>8x pertemuan + rekaman + grup diskusi</p>
-      </div>
-      <div class="card">
-        <h3>Private</h3>
-        <p class="price">Rp699.000</p>
-        <p>Jadwal fleksibel & fokus 1 siswa</p>
-      </div>
-    </div>
+<!-- DOKUMENTASI -->
+<section style="background:#f0fdf4">
+<div class="container">
+<h2>Dokumentasi Kegiatan</h2>
+<p class="subtitle">Pembinaan, kelas, dan event akademik</p>
+
+<div class="carousel-box">
+  <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
+  <img id="carousel-img" src="img/kegiatan1.jpg">
+  <button class="carousel-btn next" onclick="nextSlide()">›</button>
+  <div class="carousel-desc" id="carousel-desc">
+    Pembinaan intensif OSN
   </div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<div class="container stats-grid">
+  <div><h3>500+</h3><p>Siswa Dibina</p></div>
+  <div><h3>120+</h3><p>Peserta OSN</p></div>
+  <div><h3>30+</h3><p>Event</p></div>
+  <div><h3>10+</h3><p>Sekolah Mitra</p></div>
+</div>
 </section>
 
 <footer>
-  <p>© 2025 MIM Training & Education — Belajar Matematika Jadi Lebih Masuk Akal</p>
+© 2025 MIM Training & Education
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/62895321977815" class="wa-float" aria-label="WhatsApp">
-  <span>💬</span>
-</a>
+<script>
+const images=[
+  "img/kegiatan1.jpg",
+  "img/kegiatan2.jpg",
+  "img/kegiatan3.jpg"
+];
+const texts=[
+  "Pembinaan intensif OSN",
+  "Kelas online interaktif",
+  "Try Out dan evaluasi"
+];
+let i=0;
+const img=document.getElementById("carousel-img");
+const desc=document.getElementById("carousel-desc");
 
-<style>
-  .wa-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    z-index: 999;
-  }
+function showSlide(){
+  img.src=images[i];
+  desc.textContent=texts[i];
+}
+function nextSlide(){
+  i=(i+1)%images.length;
+  showSlide();
+}
+function prevSlide(){
+  i=(i-1+images.length)%images.length;
+  showSlide();
+}
+setInterval(nextSlide,4000);
+</script>
 
-  @media (max-width: 768px) {
-    .wa-float {
-      width: 52px;
-      height: 52px;
-      bottom: 16px;
-      right: 16px;
-      font-size: 24px;
-    }
-  }
-</style>
-
-<section id="osn" style="background:#f0fdf4;padding:60px 0">
-  <div class="container">
-    <h2 style="text-align:center">Program Unggulan: Kelas Persiapan OSN</h2>
-    <p style="text-align:center;max-width:700px;margin:0 auto 40px">Program intensif MIM Training & Education untuk siswa yang ingin berprestasi di Olimpiade Sains Nasional (OSN) Matematika tingkat SD, SMP, dan SMA.</p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Apa yang Dipelajari?</h3>
-        <ul>
-          <li>Soal OSN tingkat kabupaten hingga nasional</li>
-          <li>Strategi problem solving olimpiade</li>
-          <li>Pembahasan mendalam & konsep lanjutan</li>
-          <li>Latihan rutin & evaluasi berkala</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Cocok untuk Siapa?</h3>
-        <ul>
-          <li>Siswa berminat ikut OSN</li>
-          <li>Siswa Pra OSN yang ingin naik level</li>
-          <li>Sekolah yang menyiapkan tim OSN</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Keunggulan MIM</h3>
-        <ul>
-          <li>Fokus olimpiade, bukan sekadar kurikulum</li>
-          <li>Materi terstruktur & bertahap</li>
-          <li>Pendampingan intensif</li>
-          <li>Online & fleksibel</li>
-        </ul>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:40px">
-      <a class="btn-wa" style="font-size:18px;padding:16px 28px" href="https://wa.me/62895321977815?text=Saya%20ingin%20konsultasi%20Program%20Persiapan%20OSN%20Matematika%20MIM" target="_blank">Konsultasi OSN Sekarang</a>
-    </div>
-  </div>
-</section>
 
 </body>
 </html>
