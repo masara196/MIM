@@ -11,7 +11,7 @@
 :root{
   --green:#15803d;
   --dark:#064e3b;
-  --yellow:#ffa51e;
+  --yellow:#f29f05;
   --bg:#f9fafb;
 }
 
@@ -124,6 +124,21 @@ nav{
   margin-right:12px;
 }
 
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+}
+
+.hero-text{
+  text-align:left;
+}
+
+/* Kolom kanan hanya sebagai ruang visual */
+.hero-visual{
+  min-height:300px;
+}
+
 .btn-main{ background:var(--yellow); color:#000; }
 .btn-alt{ border:2px solid #fff; color:#fff; }
 
@@ -198,17 +213,162 @@ h2{
 }
 
 /* ================= ABOUT ================= */
-.about{
+/* ABOUT PREMIUM */
+.about-section{
+  background:#fff;
+}
+
+.about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:60px;
   align-items:center;
 }
 
-.about img{
+/* IMAGE STACK */
+.about-images{
+  position:relative;
+}
+
+.about-images img{
+  border-radius:20px;
+  object-fit:cover;
+}
+
+.img-main{
   width:100%;
   max-width:420px;
 }
+
+.img-top{
+  position:absolute;
+  top:-40px;
+  left:-30px;
+  width:180px;
+}
+
+.img-bottom{
+  position:absolute;
+  bottom:-40px;
+  right:-30px;
+  width:200px;
+}
+
+/* EXPERIENCE BADGE */
+.experience-badge{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  background:var(--green);
+  color:white;
+  padding:16px 22px;
+  border-radius:16px;
+  text-align:center;
+}
+.experience-badge strong{
+  font-size:28px;
+  display:block;
+}
+
+/* CONTENT */
+.about-content h2{
+  font-size:34px;
+  margin-bottom:16px;
+}
+
+.about-desc{
+  margin-bottom:28px;
+  color:#374151;
+}
+
+/* VALUE CARD */
+.about-card{
+  display:flex;
+  gap:16px;
+  background:#f9fafb;
+  padding:18px 20px;
+  border-radius:16px;
+  margin-bottom:16px;
+}
+
+.about-card .icon{
+  font-size:22px;
+  background:#dcfce7;
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-images{
+    margin-bottom:40px;
+  }
+
+  .img-top,
+  .img-bottom{
+    display:none;
+  }
+
+  .experience-badge{
+    position:relative;
+    margin-top:16px;
+  }
+
+  .about-content{
+    text-align:center;
+  }
+
+  .about-card{
+    text-align:left;
+  }
+}
+/* ABOUT ACTION BOX */
+.about-action-box{
+  margin-top:30px;
+}
+
+.action-card{
+  display:block;
+  padding:20px 24px;
+  border-radius:20px;
+  text-decoration:none;
+  text-align:center;
+  transition:.2s ease;
+}
+
+
+.action-card strong{
+  font-size:25px;
+  display:block;
+  margin-bottom:6px;
+}
+
+
+/* PRIMARY CTA */
+.action-card.primary{
+  background:var(--green);
+  color:white;
+}
+
+.action-card.primary:hover{
+  background:#166534;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .action-card{
+    text-align:center;
+  }
+}
+
 
 /* ================= CAROUSEL ================= */
 .carousel-box{
@@ -297,10 +457,20 @@ footer{
 /* ================= MOBILE ================= */
 @media(max-width:768px){
 
+  .hero-grid{grid-template-columns:1fr;
+  }
+
+  .hero-text{text-align:center;
+  }
+
+  .hero-visual{display:none;
+  }
+}
+
+
   .hamburger{ display:block; }
 
-  .nav-right{
-    display:none;
+  .nav-right{display:none;
     position:absolute;
     top:64px;
     right:0;
@@ -310,8 +480,7 @@ footer{
     box-shadow:0 10px 25px rgba(0,0,0,.1);
   }
 
-  .nav-right a{
-    padding:16px 20px;
+  .nav-right a{padding:16px 20px;
     border-bottom:1px solid #eee;
   }
 
@@ -362,29 +531,57 @@ footer{
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-content">
-    <h1>Smart <span>Learning</span><br>for a Smart <span>Future</span></h1>
-    <p>Bimbingan Matematika Pra OSN, OSN, dan kelas reguler dengan pendekatan terarah & berprestasi.</p>
-    <a class="btn-main" href="https://wa.me/62895321977815">Konsultasi Gratis</a>
-    <a class="btn-alt" href="#program">Lihat Program</a>
+  <div class="hero-content hero-grid">
+    
+    <!-- TEXT KIRI -->
+    <div class="hero-text">
+      <h1>Smart <span>Learning</span><br>for a Smart <span>Future</span></h1>
+      <p>Bimbingan Matematika Pra OSN, OSN, dan kelas reguler dengan pendekatan terarah & berprestasi.</p>
+      <a class="btn-main" href="https://wa.me/62895321977815">Konsultasi Gratis</a>
+      <a class="btn-alt" href="#program">Lihat Program</a>
+    </div>
+
+    <!-- KOLOM KANAN (VISUAL / KOSONG) -->
+    <div class="hero-visual"></div>
+
   </div>
 </div>
 
+
 <!-- ABOUT -->
-<section id="about">
-  <div class="container about">
-    <div>
-      <h2>Tentang Kami</h2>
-      <p>
-        MIM Training & Education adalah lembaga pendidikan nonformal
-        yang berkomitmen mendampingi siswa mencapai prestasi akademik
-        melalui pembelajaran terarah dan efektif.
-      </p>
-      <a class="btn-wa" href="https://wa.me/62895321977815">Daftar Sekarang</a>
+<section id="about" class="about-section">
+  <div class="container about-grid">
+
+    <!-- KOLOM KIRI : GAMBAR -->
+    <div class="about-images">
+      <img src="img/about1.jpg" class="img-main" alt="Kegiatan MIM">
+      <img src="img/about2.jpg" class="img-top" alt="Pembelajaran MIM">
+      <img src="img/about3.jpg" class="img-bottom" alt="Diskusi Tutor">
+
+      
     </div>
-    <img src="img/tentang.png" alt="Tentang MIM" loading="lazy">
+
+    <!-- KOLOM KANAN : TEKS -->
+    <div class="about-content">
+      <h2>Tentang MIM</h2>
+      <p class="about-desc">
+        MIM Training & Education merupakan salah satu lembaga pendidikan nonformal yang berkomitmen membantu siswa
+        menggali potensi terbaiknya melalui pembelajaran yang terarah, interaktif, dan mudah dipahami. Dengan tutor yang 
+        berpengalaman dan metode belajar yang efektif, kami hadir untuk mendampingi setiap siswa untuk mencapai prestasi
+        akademik yang optimal. 
+      </p>
+
+      <div class="about-action-box">
+  <a href="https://wa.me/62895321977815" class="action-card primary">
+    <strong>Daftar Sekarang</strong>
+  </a>
+</div>
+
+    </div>
+
   </div>
 </section>
+
 
 <!-- PROGRAM -->
 <section id="program">

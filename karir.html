@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Karir | MIM Training & Education</title>
-<meta name="description" content="Lowongan tutor dan tenaga pendidik di MIM Training & Education.">
+<meta name="description" content="Lowongan kerja tutor dan tenaga pendidikan di MIM Training & Education.">
 
 <style>
 :root{
   --green:#15803d;
   --dark:#064e3b;
-  --yellow:#ffa51e;
+  --yellow:#f29f05;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{color:var(--dark);line-height:1.6;background:#fff}
@@ -39,7 +39,10 @@ nav{
   color:var(--dark);
   font-weight:600
 }
-.brand{display:flex;align-items:center;gap:12px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
   text-decoration:none;
   color:inherit;
 }
@@ -70,26 +73,45 @@ section{padding:80px 20px}
 h2{text-align:center;font-size:32px;margin-bottom:12px}
 .subtitle{text-align:center;max-width:700px;margin:0 auto 50px}
 
-/* JOB CARD */
+/* JOB GRID */
+.job-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px
+}
 .job-card{
-  max-width:700px;
-  margin:auto;
   background:white;
   padding:30px;
   border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.1)
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between
 }
 .job-card h3{color:var(--green);margin-bottom:10px}
 .job-card ul{margin-left:18px;margin-bottom:20px}
-.job-card li{margin-bottom:8px}
-.btn{
+.job-card li{margin-bottom:8px;font-size:15px}
+
+.badge{
   display:inline-block;
+  background:var(--yellow);
+  color:#000;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:12px
+}
+
+.btn{
+  align-self:flex-start;
   background:var(--green);
   color:white;
   padding:12px 26px;
   border-radius:30px;
   font-weight:700;
-  text-decoration:none
+  text-decoration:none;
+  font-size:14px
 }
 
 /* FOOTER */
@@ -109,15 +131,15 @@ footer{
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-wrap">
     <div class="nav-left">
-  <a href="index.html" class="brand">
-    <img src="logo-mim.png" alt="Logo MIM" height="40">
-    <strong>MIM Training & Education</strong>
-  </a>
-</div>
-
+      <a href="index.html" class="brand">
+        <img src="logo-mim.png" height="40" alt="Logo MIM">
+        <strong>MIM Training & Education</strong>
+      </a>
+    </div>
     <div class="nav-right">
       <a href="index.html">Home</a>
       <a href="event.html">Event</a>
@@ -126,29 +148,93 @@ footer{
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-content">
     <h1>Bergabung Bersama Kami</h1>
-    <p>Jadilah bagian dari lembaga pendidikan yang berfokus pada prestasi dan karakter.</p>
+    <p>Kesempatan berkarir di dunia pendidikan bersama MIM Training & Education.</p>
   </div>
 </div>
 
+<!-- KARIR -->
 <section>
   <div class="container">
     <h2>Lowongan Tersedia</h2>
-    <p class="subtitle">Kesempatan berkarir di dunia pendidikan bersama MIM Training & Education</p>
+    <p class="subtitle">
+      Kami membuka beberapa posisi untuk mendukung pengembangan layanan pendidikan MIM.
+    </p>
 
-    <div class="job-card">
-      <h3>Tutor Matematika</h3>
-      <ul>
-        <li>Menguasai materi Matematika SD/SMP/SMA</li>
-        <li>Memiliki passion mengajar</li>
-        <li>Komunikatif & bertanggung jawab</li>
-        <li>Sistem online / hybrid</li>
-      </ul>
-      <a class="btn" href="https://wa.me/62895321977815">Lamar via WhatsApp</a>
+    <div class="job-grid">
+
+      <!-- JOB 1 -->
+      <div class="job-card">
+        <div>
+          <span class="badge">Tutor</span>
+          <h3>Tutor Matematika</h3>
+          <ul>
+            <li>Menguasai materi Matematika SD/SMP/SMA</li>
+            <li>Berpengalaman mengajar (nilai plus)</li>
+            <li>Komunikatif dan bertanggung jawab</li>
+            <li>Sistem online / hybrid</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://wa.me/62895321977815?text=Lamaran%20Tutor%20Matematika%20MIM">
+          Lamar Sekarang
+        </a>
+      </div>
+
+      <!-- JOB 2 -->
+      <div class="job-card">
+        <div>
+          <span class="badge">Akademik</span>
+          <h3>Koordinator Akademik</h3>
+          <ul>
+            <li>Menyusun dan mengelola program pembelajaran</li>
+            <li>Monitoring tutor dan siswa</li>
+            <li>Berpengalaman di bidang pendidikan</li>
+            <li>Terbiasa dengan sistem online</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://wa.me/62895321977815?text=Lamaran%20Koordinator%20Akademik%20MIM">
+          Lamar Sekarang
+        </a>
+      </div>
+
+      <!-- JOB 3 -->
+      <div class="job-card">
+        <div>
+          <span class="badge">Admin</span>
+          <h3>Admin Pendidikan</h3>
+          <ul>
+            <li>Mengelola data siswa dan jadwal kelas</li>
+            <li>Komunikasi dengan siswa dan orang tua</li>
+            <li>Teliti dan rapi dalam administrasi</li>
+            <li>Familiar dengan Google Workspace</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://wa.me/62895321977815?text=Lamaran%20Admin%20Pendidikan%20MIM">
+          Lamar Sekarang
+        </a>
+      </div>
+
+<!-- JOB 4 -->
+      <div class="job-card">
+        <div>
+          <span class="badge">Admin</span>
+          <h3>Admin Pendidikan</h3>
+          <ul>
+            <li>Mengelola data siswa dan jadwal kelas</li>
+            <li>Komunikasi dengan siswa dan orang tua</li>
+            <li>Teliti dan rapi dalam administrasi</li>
+            <li>Familiar dengan Google Workspace</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://wa.me/62895321977815?text=Lamaran%20Admin%20Pendidikan%20MIM">
+          Lamar Sekarang
+        </a>
+      </div>
+
     </div>
-
   </div>
 </section>
 
